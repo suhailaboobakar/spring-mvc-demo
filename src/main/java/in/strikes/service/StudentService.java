@@ -2,10 +2,12 @@ package in.strikes.service;
 
 import in.strikes.entity.Student;
 import in.strikes.repository.StudentRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class StudentService {
 
     private StudentRepository studentRepository;
