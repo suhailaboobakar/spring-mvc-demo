@@ -1,0 +1,28 @@
+package in.strikes.service;
+
+import in.strikes.entity.Student;
+import in.strikes.repository.StudentRepository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentService {
+
+    private StudentRepository studentRepository;
+
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
+
+    public Student createStudent(Student studentReq) {
+        return studentRepository.save(studentReq);
+    }
+
+    public Student getStudent (Long id) {
+        return studentRepository.findById(id);
+    }
+
+    public List<Student> getAllStudents() {
+        return studentRepository.findAll();
+    }
+}
